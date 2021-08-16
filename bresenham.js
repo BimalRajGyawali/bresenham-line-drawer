@@ -19,7 +19,7 @@ function handlePositiveSlopeLessThanOne(x1, y1, x2, y2) {
   let nextX = x1;
   let nextY = y1;
 
-  while (nextX !== x2 && nextY !== y2) {
+  while (nextX !== x2 || nextY !== y2) {
     let tr = document.createElement("tr");
     tr.appendChild(createTableData(`${decisionParameterFormula} = ${decisionParameter}`));
 
@@ -52,7 +52,7 @@ function handlePositiveSlopeGreaterThanOne(x1, y1, x2, y2) {
     let nextX = x1;
     let nextY = y1;
   
-    while (nextX !== x2 && nextY !== y2) {
+    while (nextX !== x2 || nextY !== y2) {
       let tr = document.createElement("tr");
       tr.appendChild(createTableData(`${decisionParameterFormula} = ${decisionParameter}`));
   
@@ -85,7 +85,7 @@ function handlePositiveSlopeGreaterThanOne(x1, y1, x2, y2) {
   let nextX = x1;
   let nextY = y1;
 
-  while (nextX !== x2 && nextY !== y2) {
+  while (nextX !== x2 || nextY !== y2) {
     let tr = document.createElement("tr");
     tr.appendChild(createTableData(`${decisionParameterFormula} = ${decisionParameter}`));
 
@@ -117,7 +117,7 @@ function handlePositiveSlopeGreaterThanOne(x1, y1, x2, y2) {
     let nextX = x1;
     let nextY = y1;
   
-    while (nextX !== x2 && nextY !== y2) {
+    while (nextX !== x2 || nextY !== y2) {
       let tr = document.createElement("tr");
       tr.appendChild(createTableData(`${decisionParameterFormula} = ${decisionParameter}`));
   
