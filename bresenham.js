@@ -141,13 +141,26 @@ function handlePositiveSlopeGreaterThanOne(x1, y1, x2, y2) {
   
 
 function handleButtonClick() {
-  const x1 = parseInt(document.getElementById("x1").value);
-  const y1 = parseInt(document.getElementById("y1").value);
-  const x2 = parseInt(document.getElementById("x2").value);
-  const y2 = parseInt(document.getElementById("y2").value);
+  let x1 = parseInt(document.getElementById("x1").value);
+  let y1 = parseInt(document.getElementById("y1").value);
+  let x2 = parseInt(document.getElementById("x2").value);
+  let y2 = parseInt(document.getElementById("y2").value);
+
+
+  if(isXDecreasing(x2-x1)){
+    document.getElementById('info').innerHTML = `
+        The point A should be on the left side of point B <br>
+        i.e x2 must be greater than x1.
+
+        Since, x1 > x2 , swap A and B
+    
+    `;
+    document.getElementById('result').innerHTML = "";
+    return;
+  }
 
   const slope = calculateSlope(x1, y1, x2, y2);
-
+  console.log(slope);
   document.getElementById('info').innerHTML = `<p> slope = ${slope}</p>`;
 
   if (isSlopePositive(slope) && isSlopeLessThanOne(slope)) {
