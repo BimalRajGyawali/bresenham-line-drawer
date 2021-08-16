@@ -10,3 +10,5 @@ It is an incremental error algorithm. It is one of the earliest algorithms devel
 An extension to the original algorithm may be used for drawing circles.
 
 This repository contains the implementation of Bresenham Line Drawing Algorithm using Javascript.
+
+[Visit Demo](https://bimalrajgyawali.github.io/bresenham-line-drawer/)
